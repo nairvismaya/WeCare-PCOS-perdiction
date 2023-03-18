@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Normal</title>
+
+    <link rel="icon" type="image/png" href="{{url_for('static', filename= 'Images/logo1.png' )}}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+
+    <section class="header_wrapper">
+
+        <nav class="navbar navbar-expand-lg fixed-top"
+            style="background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71));;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+                    <h2>WeCare</h2>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('test') }}">Test</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('remedy') }}">Remedies</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    <section class="nopcos_wrapper">
+
+        <div class="container ">
+            <div class="row justify-content-between align-items-center">
+
+                <!-- <div class=" col-lg-9 pe-lg-5 text-lg-end text-center border text-md-start"> -->
+                    <!-- <img src="./Images/home.png" class="img-fluid border p-0 m-0 " style="object-fit: cover; width: 100%;" alt=""> -->
+                    <div class="col-sm-12 text-center text-md-center text-lg-end">
+                        <h6 style="color: rgb(127, 0, 173);">YAYYY!!</h6>
+                        <h2 style="color: rgb(0, 67, 31);">You <b>DON'T</b> have the symptoms of <b>PCOS</b></h2>
+                        <h3 style="color: rgb(163, 89, 114);"> To avoid PCOS in future too,</h3><br>
+                        <h6>Here are some precautions you can take</h6>
+
+                      
+                          <div class="container">
+                            <div class="row justify-content-lg-end justify-content-md-between align-items-center">
+                      
+                              <div class=" col-lg-7 border pe-lg-5 text-lg-end text-center text-md-start justify-content-end "
+                                style="justify-items: right;">
+                                <!-- <h3 style="color: rgb(63, 38, 128);">Here are some <b>remedies </b><br> to overcome <b>PCOS</b></h3> -->
+                                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                                  <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                                      aria-label="Slide 1" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                                      class=""></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                                      class=""></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"
+                                      class=""></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"
+                                      class=""></button>
+                                    <!-- <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"
+                                      class=""></button> -->
+                                  </div>
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="{{url_for('static', filename= 'Images/exercise.png' )}}" class="img-fluid" alt="exercise">
+                                      <div class="container border">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173); font-weight: 800;">Do Regular Exercise</h3>
+                                          <p style="color: rgb(255, 255, 255);"> Maintaining a healthy weight is a crucial part of controlling PCOS symptoms.</p>
+                                          <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- <div class="carousel-item">
+                                      <img src="./Images/medicine.png" class="img-fluid" alt="">
+                                      <div class="container">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173);">Get Proper Suppliments</h3>
+                                          <p style="color: rgb(255, 255, 255);">Some representative placeholder content for the second slide
+                                            of the carousel.</p>
+                                          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
+                                        <!-- </div>
+                                      </div>
+                                    </div> --> -->
+                                    <div class="carousel-item ">
+                                      <img src="{{url_for('static', filename= 'Images/food.png' )}}" class="img-fluid" alt="food">
+                                      <div class="container">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173); font-weight: 800;">Eat healthy food</h3>
+                                          <p style="color: rgb(255, 255, 255);">People with PCOS tend to have higher levels of insulin, a hormone that the body uses to lower high blood sugar.</p>
+                                          <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                      
+                                    <div class="carousel-item ">
+                                      <img src="{{url_for('static', filename= 'Images/herbal.png' )}}" class="img-fluid" alt="">
+                                      <div class="container">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173); font-weight: 800;">Use Herbal Products</h3>
+                                          <p style="color: rgb(255, 255, 255);">Using herbal products cinnamomum cassia may be helpful in avoiding metabolic complications of PCOS.</p>
+                                          <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                      
+                                    <div class="carousel-item">
+                                      <img src="{{url_for('static', filename= 'Images/stress.png' )}}" class="img-fluid" alt="">
+                                      <div class="container">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173); font-weight: 800;">Don't Take Stress</h3>
+                                          <p style="color: rgb(255, 255, 255);">Stress can higher the chances of PCOS. Reducing stress can regulate cortisol which lower the chances of PCOS</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                      
+                                    <div class="carousel-item">
+                                      <img src="{{url_for('static', filename= 'Images/probiotics.png' )}}" class="img-fluid" alt="">
+                                      <div class="container">
+                                        <div class="carousel-caption text-center">
+                                          <h3 style="color: rgb(129, 0, 173); font-weight: 800;">Use Probiotics</h3>
+                                          <p style="color: rgb(255, 255, 255);">Probiotics don't just help with your digestion and gut health. They are also used in avoiding chances of PCOS.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                    </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="#footer" class="footer_wrapper mt-3 mt-md-0">
+        <div class="container-fluid">
+    
+          <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
+    
+              <div class=" col-lg-3 col-md-4 d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                  <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+                  <h2>WeCare</h2>
+                </a>
+                <span class="mb-3 mb-md-0 justify-content-end"
+                  style="color: rgb(245, 244, 244); padding-left: 90px ;">Copyright © 2023</span>
+              </div>
+    
+              <ul
+                class="social-icon col-lg-6 col-md-4 text-center justify-content-lg-end justify-content-md-between list-unstyled d-flex">
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+    
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+    
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+    
+                <li>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+              </ul>
+            </footer>
+          </div>
+    
+    
+        </div>
+    
+    
+      </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="{{url_for('static', filename= 'Images/logo1.png' )}}">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+
+  <title>WeCare</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+  <section class="header_wrapper">
+    <nav class="navbar navbar-expand-lg"
+      style="background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71));;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+          <h2>WeCare</h2>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('test') }}">Test</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('remedy') }}">Remedies</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+  <section id="test" class="test_wrapper">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+
+        <form class=" col-lg-9 pe-lg-2 text-lg-start text-center text-md-start" action="{{ url_for('result') }}" method="POST">
+
+          <h3 style="color: rgb(175, 0, 93);"><b>Test</b> your symptoms, <br>
+            <span> by filling the <b>form</b> </span>
+          </h3>
+
+          <div class="form_details mb-4">
+
+            <div class="col-md-3">
+              <label for="inputAge" class="form-label">Age</label>
+              <input type="text" name="Age (yrs)" class="form-control" id="inputAge" placeholder="Enter your age">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputBMI" class="form-label">BMI (Body Mass Index)</label>
+              <input type="text" name="BMI" class="form-control" id="inputBMI" placeholder="Enter your BMI">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputPeriod" class="form-label">Period Cycle</label>
+              <input type="text" name="Cycle(R/I)" class="form-control" id="inputPeriod" placeholder="How many periods/year?">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputLength" class="form-label">Period Cycle Length</label>
+              <input type="text" name="Cycle length(days)" class="form-control" id="inputLength"
+                placeholder="How many days period last?">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputMarraige" class="form-label">Marriage Status</label>
+              <input type="text" name="Marraige Status (Yrs)" class="form-control" id="inputMarraige"
+                placeholder=" Married = 1 OR Unmarried = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputPregnant" class="form-label">Pregnant</label>
+              <input type="text" name="Pregnant(Y/N)" class="form-control" id="inputPregnant"
+                placeholder="Pregnant = 1 OR NonPregnant = 0">
+
+            </div>
+            <div class="col-md-3">
+              <label for="inputAborption" class="form-label">Aborptions</label>
+              <input type="text" name="No. of aborptions" class="form-control" id="inputAborption"
+                placeholder="Enter number of aborptions">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputRatio" class="form-label">Waist:Hip Ratio</label>
+              <input type="text" name="Waist:Hip Ratio" class="form-control" id="inputRatio"
+                placeholder="Enter your Waist:Hip Ratio">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputTSH" class="form-label">TSH</label>
+              <input type="text" name="TSH (mIU/L)" class="form-control" id="inputTSH" placeholder="Enter TSH level in mIU/L">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputPRL" class="form-label">PRL</label>
+              <input type="text" name="PRL(ng/mL)" class="form-control" id="inputPRL" placeholder="Enter PRL level in ng/mL">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputVitamin" class="form-label">Vitamin D3</label>
+              <input type="text" name="Vit D3 (ng/mL)" class="form-control" id="inputVitamin"
+                placeholder=" Enter Vit D3 level in ng/mL">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputRBS" class="form-label">RBS</label>
+              <input type="text" name="RBS(mg/dl)" class="form-control" id="inputRBS" placeholder="Enter RBS level in ms/dl">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputWeight" class="form-label">Weight Gain</label>
+              <input type="text" name="Weight gain(Y/N)" class="form-control" id="inputWeight" placeholder="Gain = 1 OR No Gain = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputHairGrowth" class="form-label">Hair Growth</label>
+              <input type="text" name="hair growth(Y/N)" class="form-control" id="inputHairGrowth"
+                placeholder="Growth = 1 OR No Growth = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputSkin" class="form-label">Skin Darkening</label>
+              <input type="text" name="Skin darkening (Y/N)" class="form-control" id="inputSkin"
+                placeholder="Darkening = 1 OR No Darkening = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputHairLoss" class="form-label">Hair Loss</label>
+              <input type="text" name="Hair loss(Y/N)" class="form-control" id="inputHairLoss"
+                placeholder="Loss = 1 OR No Loss = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputPimples" class="form-label">Pimples</label>
+              <input type="text" name="Pimples(Y/N)" class="form-control" id="inputPimples"
+                placeholder="Pimples = 1 OR No Pimples = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputFood" class="form-label">Fast food</label>
+              <input type="text" name="Fast food (Y/N)" class="form-control" id="inputFood"
+                placeholder="Frequently = 1 OR Rarely = 0">
+            </div>
+
+            <div class="col-md-3">
+              <label for="inputExercise" class="form-label">Regular Exercise</label>
+              <input type="text" name="Reg.Exercise(Y/N)" class="form-control" id="inputExercise" placeholder="Do = 1 OR Don't = 0">
+            </div>
+
+             <!-- <div class="main-btn"> -->
+              <button type="submit" class="main-btn justify-content-between" value="submit">Show Result</button>
+             <!-- </div> -->
+          </div>
+
+        </form>
+
+      </div>
+
+
+      <!-- <img src="./test.png" class="img-fluid border p-0 m-0 h-100vh w-100%"
+          style="object-fit: cover; width: 100%;" alt=""> -->
+    </div>
+    </div>
+  </section>
+
+  
+
+  <section id="#footer" class="footer_wrapper mt-3 mt-md-0">
+    <div class="container-fluid">
+
+      <div class="container ">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
+
+          <div class=" col-lg-3 col-md-4 d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+              <h2>WeCare</h2>
+            </a>
+            <span class="mb-3 mb-md-0 justify-content-end"
+              style="color: rgb(245, 244, 244); padding-left: 90px ;">Copyright © 2023</span>
+          </div>
+
+          <ul
+            class="social-icon col-lg-6 col-md-4 text-center justify-content-lg-end justify-content-md-between list-unstyled d-flex">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+
+    </div>
+
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </section>
+
+</body>
+
+</html>

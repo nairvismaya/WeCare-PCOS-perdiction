@@ -1,0 +1,65 @@
+@media(max-width:991px){
+
+    section{
+        padding: 0;
+    }
+
+    h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:767px){
+
+
+    h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .pcos_wrapper .table-wrapper{
+        min-height: 300px;
+        overflow-x: scroll;
+    }
+
+    .remedy_wrapper .card{
+        min-height: 200px;
+    }
+    
+}
+
+.header_scrolled{
+    height: auto;
+}
+
+.header_wrapper .navbar-nav{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.header_wrapper .navbar-nav .navbar-brand h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.header_wrapper .nav-item .nav-link{
+    margin-top: 15px;
+}
+
+.home_wrapper{
+    padding: 200px 0;
+}

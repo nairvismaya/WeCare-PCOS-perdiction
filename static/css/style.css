@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+:root{
+    --primary-color: rgb(155, 16, 100);
+    --secondary-color: rgb(95, 67, 180);
+    --third-color: rgb(0, 0, 165);
+    --bg-white: white;
+    --bg-dark-blue: rgb(30, 30, 44);
+    --gray-color: gray;
+    --gradient-color: linear-gradient(-224deg, var(var(--primary-color)0 , rgba(95, 0, 119, 0.641) 100));
+
+    --primary-font: 'Poppins', sans-serif;
+    --primary-text: rgb(180, 0, 108);
+    --secondary-text: rgb(116, 44, 89);
+    --gradient-text:linear-gradient(to bottom right, rgb(161, 114, 161), rgb(103, 103, 188), rgb(216, 117, 160));
+    --text-white: white;
+    --text-gray: rgb(74, 74, 74);
+}
+
+body{
+    font-family: var(--primary-font);
+}
+
+a{
+    text-decoration: none;
+
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-dark-blue);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outter-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+section{
+    padding: 0;
+}
+
+
+.main-btn{
+    display: inline-block;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    padding: 15px 35px ;
+    background-color: transparent;
+    border: 2px solid var(--bg);
+    color: var(--text-white);
+    background-color: #360593;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+.main-btn:hover{
+    background-color: rgb(29, 16, 73);
+    border-color: gray;
+    color: white;
+}
+h1{
+    font-size: 54px;
+    line-height: 68px;
+    font-weight: 800;
+    color: var(--gradient-color);
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom right, rgb(140, 0, 140), rgb(6, 6, 136));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 span{
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+.subtitle{
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    
+}
+
+h2{
+    
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--text-white);
+    
+    margin-bottom: 15px;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 19px;
+}
+
+h6{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* line-height: 1.3;*/
+    font-weight: 600; 
+    display: block;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+p{
+    color: var(--text-gray);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Navbar */
+
+.header_wrapper{
+    padding: 0;
+}
+
+.header_wrapper .navbar{
+     background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71)); 
+    padding: 15px 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.header_wrapper .navbar .navbar-brand{
+    width: 250px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.header_wrapper .navbar .navbar-brand img{
+    /* border: 1px solid white; */
+    margin: 3px 0 1px 0;
+    padding: 2px 3px ;
+    /* margin-bottom: 2px; */
+    float: left;
+    max-width: 90px;
+    height: auto;
+}
+
+.header_wrapper .navbar .navbar-brand h2{
+    
+    /* border: 1px solid white; */
+    width: 250px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 20px ;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to bottom right, #840984, rgb(138, 138, 244), rgb(231, 81, 146)); 
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+}
+
+.header_wrapper .navbar .navbar-brand h2:hover{
+    background-color: var(--text-white) ;
+}
+
+
+/* .header_wrapper .collapse .navbar-collapse .navbar-nav{
+    background-color: gray;
+} */
+.header_wrapper .navbar-toggler{
+    border: gray;
+}
+
+.header_wrapper .navbar-toggler-icon{
+    border: 0;
+    color: var(--gray-color);
+    line-height: 2;
+   
+}
+
+.header_wrapper .navbar-toggler-icon:focus{
+    box-shadow: none;
+    border: gray;
+}
+
+.header_wrapper .nav-item{
+    margin: 0 15px;
+}
+
+.header_wrapper .nav-item .nav-link{
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--gray-color);
+    display: inline-block;
+}
+
+.header_wrapper .nav-item .nav-link::after{
+    position: absolute;
+    content: " ";
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s;
+    bottom: 0;
+}
+
+.header_wrapper .nav-item .nav-link.active::after,
+.header_wrapper .nav-item .nav-link:hover::after{
+    width: 100%;
+}
+
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover{
+    color: var(--text-white);
+}
+
+.header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);;
+}
+
+.header-scrolled .nav-item .nav-link.active,
+.header-scrolled .nav-item .nav-link:hover{
+    color: var(--text-white);
+}
+
+/* HOME */
+
+.home_wrapper{
+   
+    height: 100%;
+    width: 100%;
+    min-height: 650px;
+    background-image: url(../Images/home.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 200px 0 100px 0;
+    
+}
+
+.home_wrapper .col-sm-9{
+    width: 500px;
+    height: 500px;
+    margin-left: 600px; 
+}
+
+
+/* Test */
+
+.test_wrapper{
+   
+    height: auto;
+    width: 100%;
+    min-height: 650px;
+    background-image: url(../Images/test.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 200px 0 100px 0;
+    
+}
+
+.test_wrapper .col-lg-9{
+    width: 900px;
+    /* border: 5px solid #360593; */
+    margin-top: 5px;
+    height: 650px;
+    margin-bottom: 100px;
+}
+
+/* .test_wrapper .col-lg-9 button{
+    display: flex;
+    flex: left;
+} */
+
+.test_wrapper form .form_details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .form_details .col-md-3{
+    margin: 8px;
+    width: calc(100% / 3 - 20px);
+}
+
+form .form_details .col-md-3 .form-label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+form .form_details .col-md-3 .form-control{
+    height: 35px;
+    width: 100%;
+    outline: none;
+}
+
+.test_wrapper .form-control:hover,
+.test_wrapper .form-control:focus{
+    border-color: var(--primary-color) ;
+    color: black;
+
+}
+
+.test_wrapper .col-lg-9 button {
+    
+    float: left;
+    margin: 100px 300px 45px 0;
+    
+    
+}
+
+/* Remedy */
+
+.remedy_wrapper{
+
+        height: auto;
+        width: 100%;
+        min-height: 650px;
+        background-image: url(../Images/remedy.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        /* background-attachment: fixed; */
+        padding: 200px 0 100px 0;
+}
+
+
+
+.remedy_wrapper .col-lg-8{
+    margin: 3px 2px 3px 1px;
+    height: 680px;
+    width: 990px;
+}
+
+.remedy_wrapper ul.nav-pills {
+    border: 1px solid rgb(37, 42, 46);
+    border-radius: 50px;
+    background-color:  rgb(181, 124, 124);
+    padding: 2px;
+    /* color: white; */
+}
+
+.remedy_wrapper ul li.nav-link.active {
+    border-radius: 50px;
+    transition: all 0.45s cubic-bezier(0, 0.2, 0.2, 1);
+    color: rgb(221, 129, 149);
+    padding: 2px;
+    border: 0;
+    
+}
+
+
+.remedy_wrapper .nav-pills{
+    color: rgb(44, 35, 35);
+    font-size: 20px;
+}
+
+.remedy_wrapper .nav-pills .nav-link.active {
+    border-radius: 50px;
+    background-color: rgb(116, 44, 89);
+    color: rgb(101, 159, 206);
+    /* padding: 2px; */
+}
+
+.remedy_wrapper .tab-content .tab-pane{
+    height: 400px;
+    margin: 3px 0 3px 0;
+}
+
+.remedy_wrapper .row .card {
+    display: inline-block;
+    position: relative;
+    margin: 15px;
+    height: 30vh;
+    width: 18rem;
+    background-color: rgb(49, 7, 116);
+    cursor: pointer;
+    /* padding: 60px 0 40px 0; */
+    color: aliceblue;
+    transition: transform cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+
+.remedy_wrapper .row .card:hover {
+    box-shadow: 0px 2px 50px 0 rgb(11, 29, 44);
+    transform: translateY(-5px);
+}
+
+.remedy_wrapper .row .card p{
+    color: white;
+}
+
+/* PCOS */
+
+.pcos_wrapper{
+   
+    height: auto;
+    width: 100%;
+    min-height: 650px;
+    background-image: url(../Images/PCOS.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 200px 0 100px 0;
+    
+}
+
+.pcos_wrapper .container .col-sm-10{
+    height: 300px;
+    width: 900px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #360593;
+}
+
+
+.pcos_wrapper table{
+    border: 2px solid gray;
+    
+}
+
+.pcos_wrapper th{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(60, 61, 130);
+    color: rgb(201, 164, 208);
+}
+
+.pcos_wrapper .table-wrapper{
+    max-height: 330px;
+    margin: 10px;
+    vertical-align: middle;
+    
+}
+
+.pcos_wrapper .table-wrapper th,
+.pcos_wrapper .table-wrapper td{
+    border: 1px solid rgb(255, 254, 254);
+    padding: 10px;
+}
+
+.pcos_wrapper .outer-wrapper{
+    border-radius: 3px;
+}
+
+
+.pcos_wrapper table:hover,
+.pcos_wrapper table:focus{
+    box-shadow: 20px rgb(118, 69, 128);
+    transform: translateY(-5px);
+
+}
+/* NOPCOS */
+
+.nopcos_wrapper{
+   
+    height: auto;
+    width: 100%;
+    min-height: 650px;
+    background-image: url(./Images/Normal.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 200px 0 100px 0;
+    
+}
+
+.nopcos_wrapper .carousel-inner .carousel-item img{
+    height: 450px;
+    /* width: 500px; */
+}
+
+.nopcos_wrapper .carousel-inner .carousel-item .container{
+    border: 10px solid white;
+    width: 500px;
+}
+
+.nopcos_wrapper .carousal-item{
+    height: 800px;
+    width: 80%;
+}
+
+/* .remedy_wrapper .carousel-item{
+    background-color: rgb(136, 223, 198);
+} */
+
+
+.footer_wrapper .container-fluid{
+    background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71)); 
+    padding: 5px 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.footer_wrapper .navbar-brand img{
+    /* border: 1px solid white; */
+    margin: 3px 0 1px 0;
+    padding: 2px 3px ;
+    /* margin-bottom: 2px; */
+    float: left;
+    max-width: 90px;
+    height: auto;
+}
+
+.footer_wrapper .navbar-brand h2{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px 20px ;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to bottom right, #840984, rgb(138, 138, 244), rgb(231, 81, 146)); 
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer_wrapper .social-icon li{
+    margin: 10px;
+    
+} 
+
+.footer_wrapper .social-icon{
+    color: white;
+}
+
+i{
+    color: white;
+   
+}

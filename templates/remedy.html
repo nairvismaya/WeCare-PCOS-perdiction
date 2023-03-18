@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="{{url_for('static', filename= 'Images/logo1.png' )}}">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+
+  <title>WeCare</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+  <section class="header_wrapper">
+
+
+    <nav class="navbar navbar-expand-lg sticky-top"
+      style="background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71));;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+          <h2>WeCare</h2>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('test') }}">Test</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('remedy') }}">Remedies</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+  </section>
+
+
+  <section id="remedy" class="remedy_wrapper">
+    <!-- <div class="container-fluid"> -->
+
+    <div class="container-fluid p-4">
+      <div class="row justify-content-lg-end justify-content-md-between align-items-center">
+
+        <div class=" col-lg-8 pe-lg-5 text-lg-end text-center text-md-start justify-content-end "
+          style="justify-items: right;">
+          <h3 style="color: rgb(63, 38, 128);">Here are some <b>remedies </b><br> to overcome <b>PCOS</b></h3>
+
+          <div class="pt-2 ">
+
+            <ul class="nav nav-pills justify-content-center justify-content-lg-between mb-2 " id="pills-tab"
+              role="tablist">
+
+              <li class="nav-item" role="presentation">
+
+                <button class="nav-link active" style="color:white" id="pills-food-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food"
+                  aria-selected="true">FOOD to TAKE and AVOID</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" style="color:white" id="pills-exe-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-exe" type="button" role="tab" aria-controls="pills-exe"
+                  aria-selected="false">EXERCISES and YOGA</button>
+              </li>
+
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active p-2 mt-3" id="pills-food" role="tabpanel"
+                aria-labelledby="pills-food-tab" tabindex="0">
+                <div class="container">
+
+                  <div class="row " style="height: 600px; width: 900px; overflow: auto;">
+
+                    <div class="col-lg-4 col-md-4 mb-4 ">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center ">
+                          <!-- <img src="./Images/service-3.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">Eat</b> Berries</h6>
+                          <p>Ex. strawberries, blueberries</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 mb-4 ">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center overflow-auto">
+                          <!-- <img src="./Images/service-2.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">Eat</b> Leafy greens</h6>
+                          <p>Ex. spinach, kale, and artichokes</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center overflow-auto">
+                          <!-- <img src="./Images/service-1.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">Eat</b> Fatty fish</h6>
+                          <p>Ex. tuna, sardines, mackerel, and salmon</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center overflow-auto">
+                          <!-- <img src="./Images/service-4.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">avoid</b> Refined carbohydrate sources</h6>
+                          <p>Ex. cakes, pastries and white bread</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center overflow-auto">
+                          <!-- <img src="./Images/service-2.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">avoid</b> Fried food and fast food </h6>
+                          <p>Ex. pizza and burgers</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card">
+                        <div class="card-body text-md-start text-center overflow-auto">
+                          <!-- <img src="./Images/service-2.svg" class="img-fluid mb-4" alt=""> -->
+                          <h6><b style="color: rgb(195, 105, 255);">avoid</b> Carbonated beverages</h6>
+                          <p>Ex. sodas and energy drinks</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+              </div>
+
+              <div class="tab-pane fade p-3 mt-3" id="pills-exe" role="tabpanel" aria-labelledby="pills-exe-tab">
+
+                <div class="row " style="height: 600px; width: 900px; overflow: auto;">
+
+                  <div class="col-lg-4 col-md-4 mb-4 ">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center ">
+                        <h6><b style="color: rgb(195, 105, 255);">EXERCISE-</b> CARDIO</h6>
+                        <p>For reducing insulin resistance, boosting fertility, stabilising mood</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-lg-4 col-md-6 mb-4 ">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center overflow-auto">
+                        <!-- <img src="./Images/service-2.svg" class="img-fluid mb-4" alt=""> -->
+                        <h6><b style="color: rgb(195, 105, 255);">EXERCISE-</b> STRENGTH TRAINING</h6>
+                        <p>For reducing insulin resistance, increasing metabolic rate & body composition</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center overflow-auto">
+                        <!-- <img src="./Images/service-1.svg" class="img-fluid mb-4" alt=""> -->
+                        <h6><b style="color: rgb(195, 105, 255);">EXERCISE-</b> HIGH INTENSITY INTERVAL TRAINING</h6>
+                        <p>For increasing cardiovascular fitness & decreasing waist.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center overflow-auto">
+                        <!-- <img src="./Images/service-4.svg" class="img-fluid mb-4" alt=""> -->
+                        <h6><b style="color: rgb(195, 105, 255);">yoga-</b> Malasana</h6>
+                        <p>Strengthen the pelvic floor & abdominal core while opening the hips.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center overflow-auto">
+                        <!-- <img src="./Images/service-2.svg" class="img-fluid mb-4" alt=""> -->
+                        <h6><b style="color: rgb(195, 105, 255);">yoga-</b> Setu Bandhasana</h6>
+                        <p>Calm the brain and reduce stress & anxiety while relieving tension in the back muscles.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                      <div class="card-body text-md-start text-center overflow-auto">
+                        <h6><b style="color: rgb(195, 105, 255);">yoga-</b> Dhanurasana</h6>
+                        <p>Help relieve menstrual discomfort, stimulate reproductive organs & regulate menstrual flow.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section id="#footer" class="footer_wrapper mt-3 mt-md-0">
+    <div class="container-fluid">
+
+      <div class="container ">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+          <div class=" col-lg-3 col-md-4 d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+              <h2>WeCare</h2>
+            </a>
+            <span class="mb-3 mb-md-0 justify-content-end"
+              style="color: rgb(245, 244, 244); padding-left: 90px ;">Copyright © 2023</span>
+          </div>
+
+          <ul
+            class="social-icon col-lg-6 col-md-4 text-center justify-content-lg-end justify-content-md-between list-unstyled d-flex">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
