@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="{{url_for('static', filename= 'Images/logo1.png' )}}">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+
+  <title>WeCare | Home</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+  <section class="header_wrapper">
+
+
+    <nav class="navbar navbar-expand-lg"
+      style="background: linear-gradient(to bottom right, rgb(78, 4, 78), rgb(12, 12, 90), rgb(104, 45, 71));;">
+      <div class="container ">
+        <a class="navbar-brand" href="#">
+          <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+          <h2>WeCare</h2>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('test') }}">Test</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('remedy') }}">Remedies</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+
+  </section>
+  <section id="home" class="home_wrapper">
+    <div class="container">
+      <div class="row">
+        <!-- <img src="./Images/home.png" class="img-fluid border p-0 m-0 " style="object-fit: cover; width: 100%;" alt=""> -->
+        <div class="col-sm-12 text-center text-md-center text-lg-end">
+          <h6>WORRIED ABOUT HAVING PCOS?</h6>
+          <h2>Use</h2>
+          <h1> WeCare</h1><br>
+          <h3>To test your symptoms</h3>
+
+          <h6>There are many different symptoms of PCOS,</h6>
+          <p>Some are <b>IRREGULAR PERIOD</b>, <b>HAIR LOSS</b>, <b>WEIGHT GAIN</b>, etc</p>
+
+          <a href="{{ url_for('test') }}" class="main-btn" tabindex="-1" role="button" aria-disabled="true">TAKE TEST</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="#footer" class="footer_wrapper mt-3 mt-md-0">
+    <div class="container-fluid">
+
+      <div class="container ">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
+
+          <div class=" col-lg-3 col-md-4 d-flex align-items-center">
+            <a class="navbar-brand" href="./index.html">
+              <img src="{{url_for('static', filename= 'Images/logo1.png' )}}" class="img-fluid" alt="logo">
+              <h2>WeCare</h2>
+            </a>
+            <span class="mb-3 mb-md-0 justify-content-end"
+              style="color: rgb(245, 244, 244); padding-left: 90px ;">Copyright © 2023</span>
+          </div>
+
+          <ul
+            class="social-icon col-lg-6 col-md-4 text-center justify-content-lg-end justify-content-md-between list-unstyled d-flex">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+</body>
+
+</html>
